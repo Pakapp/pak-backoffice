@@ -15,6 +15,10 @@ switch ($page) {
     $include = 'template/farm_add.php';
     $active['farms'] = 'active';
     break;
+  case 'farm_edit':
+    $include = 'template/farm_edit.php';
+    $active['farms'] = 'active';
+    break;
   case 'login':
     $include = 'template/login.php';
     $active['login'] = 'active';
@@ -24,7 +28,7 @@ switch ($page) {
     redirect('index.php');
     break;
   default:
-    $include = 'template/main.php';
+    $include = 'template/farms.php';
     $active['index'] = 'active';
     break;
 }

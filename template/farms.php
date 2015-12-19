@@ -2,23 +2,6 @@
 
 $firebase = new \Firebase\FirebaseLib(DEFAULT_URL, DEFAULT_TOKEN);
 
-// --- storing an array ---
-/*$test = array(
-    "foo" => "bar",
-    "i_love" => "lamp",
-    "id" => 42
-);*/
-//$dateTime = new DateTime();
-//$firebase->set(DEFAULT_PATH . '/' . $dateTime->format('c'), $test);
-
-// --- storing a string ---
-//$firebase->set(DEFAULT_PATH . '/name/contact001', "John Doe");
-
-// --- reading the stored string ---
-//$name = $firebase->get(DEFAULT_PATH . '/name/');
-//print_r($name);
-//die();
-
 $farmsObj = $firebase->get('/farms');
 $farms = json_decode($farmsObj);
 ?>
@@ -32,17 +15,18 @@ $farms = json_decode($farmsObj);
       <table class="table">
         <thead>
           <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Products</th>
-            <th>Tools</th>
+            <th class="text-center">#</th>
+            <th class="text-center">Name</th>
+            <th class="text-center">Products</th>
+            <th class="text-center">Packages</th>
+            <th class="text-center">Tools</th>
           </tr>
         </thead>
         <tbody>
           <?php
           if (isset($farms) && $farms) {
               $i = 0;
-              foreach ($farms as $value) {
+              foreach ($farms as $key=>$value) {
                   ++$i;
                   ?>
             <tr>
@@ -50,12 +34,13 @@ $farms = json_decode($farmsObj);
                   ?></td>
               <td><?php echo $value->name;
                   ?></td>
-              <td class="text-center"><?php echo count($value->products);
+              <td class="text-center"><?php echo count((array)$value->products);
                   ?></td>
-              <td class="text-center"></td>
+              <td class="text-center"><?php echo isset($value->packages)?count((array)$value->packages):'0';
+                  ?></td>
+              <td class="text-center"><a href="<?php echo HOST; ?>index.php?page=farm_edit&id=<?php echo $key; ?>">Edit</a></td>
             </tr>
             <?php
-
               }
           }
           ?>
