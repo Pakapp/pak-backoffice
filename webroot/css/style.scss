@@ -1,0 +1,184 @@
+/* font color */
+$font-color:#ffffff;
+$font-color-catelog-description:#999999;
+$font-color-navber:#dbd5e1;
+$font-color-navber-hover:#ffffff;
+$font-color-title:#7a52b5;
+$font-color-btn-default:#ffffff;
+/* backgroud color */
+$bg-color:#232323;
+$bg-color-navber:#7a52b5;
+$bg-color-navber-hover:#8b71d6;
+$bg-color-navber-iconbar:#ffffff;
+$bg-color-catelog:#000000;
+$bg-color-btn-default:#8b71d6;
+$bg-color-btn-default-hover:#BAA9ED;
+$bg-color-table-th:#E0CAFF;
+/* border color */
+$border-title:#999999;
+$border-btn-default:#CCCCCC;
+
+.navbar-default {
+  background-color: $bg-color-navber;
+  border: 0;
+}
+
+.navbar-brand {
+  //padding-top: 2px;
+}
+
+.navbar-brand>img {
+  width: 128px;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+  color: $font-color;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  background-color: $bg-color-navber-hover;
+  color: $font-color-navber-hover;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+  background-color: $bg-color-navber-hover;
+  color: $font-color-navber-hover;
+}
+
+.navbar-default .navbar-brand {
+  color: $font-color;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: $font-color-navber;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  background-color: $bg-color-navber-hover;
+  color: $font-color-navber-hover;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+  background-color: $bg-color-navber-hover;
+  color: $font-color-navber-hover;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: $bg-color-navber-hover;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: $bg-color-navber-iconbar;
+}
+
+.dropdown-menu {
+  background-color: $bg-color-navber;
+  border: 0;
+}
+
+.dropdown-menu>li>a {
+  color: $font-color-navber;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+  background-color: $bg-color-navber-hover;
+  color: $font-color-navber-hover;
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+  background-color: $bg-color-navber-hover;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: $font-color-navber;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus, .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+    color: $font-color-navber-hover;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu>.active>a, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover {
+    background-color: $bg-color-navber-hover;
+    color: $font-color-navber-hover;
+  }
+}
+
+.form-group.title {
+  font-size: 26px;
+  margin: 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-bottom: double 4px $border-title;
+  color: $font-color-title;
+  //white-space: nowrap;
+}
+
+.btn-default {
+  color: $font-color-btn-default;
+  background-color: $bg-color-btn-default;
+  border-color: $border-btn-default;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default:active:hover, .btn-default:active:focus {
+  color: $font-color-btn-default;
+  background-color: $bg-color-btn-default-hover;
+}
+
+label.control-label.detail {
+  text-align: left !important;
+  font-weight: normal;
+}
+
+.table>thead>tr>th {
+  border-bottom: 0px;
+  background: $bg-color-table-th;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  border: 1px solid #ffffff;
+}
+
+.table>tbody>tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+.main-image {
+  width: 100%;
+}
+
+.form-upload {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+}
+
+.form-pdf {
+  width: 100%;
+  height: 500px;
+}
+
+.fb-page blockquote {
+  border: 0px;
+  font-size: 14px;
+  padding: 0px;
+}
+
+.note {
+  margin-top: 20px;
+}
+
+.note h4 {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.agenda-header {
+  font-weight: bold;
+}
