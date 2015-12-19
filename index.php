@@ -1,5 +1,5 @@
 <?php
-//define('HOST','http://project.dropyourstore.com/pak/');
+//define('HOST', 'http://project.dropyourstore.com/pak/');
 define('HOST', 'http://localhost:8888/pak/');
 require_once 'config/config.php';
 $page = isset($_GET['page']) ? $_GET['page'] : '';
@@ -25,7 +25,7 @@ switch ($page) {
     break;
   case 'logout':
     session_destroy();
-    redirect('index.php');
+    redirect(HOST);
     break;
   default:
     $include = 'template/farms.php';
@@ -40,14 +40,14 @@ switch ($page) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>PAK</title>
-    <link rel="stylesheet" href="<?php echo HOST; ?>webroot/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo HOST; ?>webroot/css/sticky-footer-navbar.css">
-    <link rel="stylesheet" href="<?php echo HOST; ?>webroot/css/sweetalert.css">
-    <!--<link rel="stylesheet" href="<?php echo HOST; ?>webroot/css/style.min.css">-->
-    <script src="<?php echo HOST; ?>webroot/js/jquery-1.11.3.min.js"></script>
-    <script src="<?php echo HOST; ?>webroot/js/bootstrap.min.js"></script>
-    <script src="<?php echo HOST; ?>webroot/js/sweetalert.min.js"></script>
-    <script src="<?php echo HOST; ?>webroot/js/jquery.blockUI.js"></script>
+    <link rel="stylesheet" href="<?php echo HOST; ?>css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo HOST; ?>css/sticky-footer-navbar.css">
+    <link rel="stylesheet" href="<?php echo HOST; ?>css/sweetalert.css">
+    <!--<link rel="stylesheet" href="<?php echo HOST; ?>css/style.min.css">-->
+    <script src="<?php echo HOST; ?>js/jquery-1.11.3.min.js"></script>
+    <script src="<?php echo HOST; ?>js/bootstrap.min.js"></script>
+    <script src="<?php echo HOST; ?>js/sweetalert.min.js"></script>
+    <script src="<?php echo HOST; ?>js/jquery.blockUI.js"></script>
   </head>
 
   <body>
@@ -69,12 +69,11 @@ switch ($page) {
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li class="<?php echo isset($active['farms']) ? $active['farms'] : ''; ?>"><a href="<?php echo HOST; ?>index.php?page=farms">Farms</a></li>
-                <li class="<?php echo isset($active['packages']) ? $active['packages'] : ''; ?>"><a href="<?php echo HOST; ?>index.php?page=packages">Packages</a></li>
+                <li class="<?php echo isset($active['farms']) ? $active['farms'] : ''; ?>"><a href="<?php echo HOST; ?>farms/">Farms</a></li>
                 <?php if (isset($_SESSION['PAK_ID']) && $_SESSION['PAK_ID'] != '') {
     ?>
                   <li class=""><a href="<?php echo HOST;
-    ?>index.php?page=logout">Logout</a></li>
+    ?>logout/">Logout</a></li>
                   <?php
 
 } ?>

@@ -16,8 +16,8 @@ $db_name = 'dropyour_master';
 $connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 
 if (!$connection) {
-    echo 'Not connected : '.mysqli_error();
-    die();
+    //echo 'Not connected : '.mysqli_error();
+    //die();
 } else {
     mysqli_select_db($connection, $db_name) or die('No Datebase');
     mysqli_query($connection, 'SET NAMES UTF8');

@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
             $firebase = new \Firebase\FirebaseLib(DEFAULT_URL, DEFAULT_TOKEN);
             $firebase->set('/farms/'.$_GET['id'], $data);
-            redirect(HOST.'index.php?page=farms');
+            redirect(HOST.'farms/');
         }
     }
 }

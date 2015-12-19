@@ -7,7 +7,7 @@ $farms = json_decode($farmsObj);
 ?>
   <div class="row">
     <div class="col-md-12">
-      <a class="btn btn-default" href="<?php echo HOST; ?>index.php?page=farm_add" title="Add new farm">New</a>
+      <a class="btn btn-default" href="<?php echo HOST; ?>farm_add/" title="Add new farm">New</a>
     </div>
   </div>
   <div class="row">
@@ -38,7 +38,7 @@ $farms = json_decode($farmsObj);
                   ?></td>
               <td class="text-center"><?php echo isset($value->packages)?count((array)$value->packages):'0';
                   ?></td>
-              <td class="text-center"><a href="<?php echo HOST; ?>index.php?page=farm_edit&id=<?php echo $key; ?>">Edit</a></td>
+              <td class="text-center"><a href="<?php echo HOST; ?>farm_edit/<?php echo $key; ?>/">Edit</a></td>
             </tr>
             <?php
               }
