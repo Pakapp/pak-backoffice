@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteRule img/(.*)  webroot/img/$1 [L]
+	RewriteRule files/(.*)  webroot/files/$1 [L]
+	RewriteRule css/(.*)  webroot/css/$1 [L]
+	RewriteRule js/(.*)  webroot/js/$1 [L]
+
+	ErrorDocument 403 http://project.dropyourstore.com/pak/
+	ErrorDocument 404 http://project.dropyourstore.com/pak/
+</IfModule>
